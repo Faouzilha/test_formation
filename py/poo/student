@@ -1,0 +1,11 @@
+from poo.person import person # import de la class Person depuis le module poo.person
+
+# Ici Sutdent a comme classe mere Person
+class Student(Person): # hérite de la classe Person, avec ts ls attributs et méthodes de la classe Person, en plus de ses propres attributs et méthodes.
+    def __init__(self, name, age, section): # Appel du constructeur de la classe mère avec super()
+                                            # utilise super() pour appeler le constructeur de la classe mère (Person) 
+        super().__init__(name, age) # Ajout d'un nouvel attribut spécifique à la classe Student, 
+        self.section = section # et ajoute son propre attribut section.
+    
+    def __str__(self): # Utilisation de la méthode __str__ de la classe mère avec super(), pour obtenir la représentation en chaîne de caractères
+        return super() + f"{self.section}" #  de la classe mère (Person), puis ajoute l'information spécifique à la classe Student avec f", Section: {self.section}".

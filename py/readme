@@ -1,0 +1,162 @@
+
+# Opérateur	    Exemple	    Equivalent à	Description
+# =	x = 1	    x = 1	    Affecte 1 à la variable x
+# +=	x += 1	    x = x + 1	Ajoute 1 à la dernière valeur connue de x et affecte la nouvelle valeur (l’ancienne + 1) à x
+# -=	x -= 1	    x = x – 1	Enlève 1 à la dernière valeur connue de x et affecte la nouvelle valeur à x
+# *=	x *= 2	    x = x * 2	Mutliplie par 2 la dernière valeur connue de x et affecte la nouvelle valeur à x
+# /=	x /= 2	    x = x / 2	Divise par 2 la dernière valeur connue de x et affecte la nouvelle valeur à x
+# %=	x %= 2	    x = x % 2	Calcule le reste de la division entière de x par 2 et affecte ce reste à x
+# //=	x //= 2	    x = x // 2	Calcule le résultat entier de la division de x par 2 et affecte ce résultat à x
+# **=	x **= 4	    x = x ** 4	Elève x à la puissance 4 et affecte la nouvelle valeur dans x
+
+#  listes Python
+
+#  Pour définir une nouvelle liste en Python, on va devoir utiliser une paire de crochets [ ]. 
+#  Nous allons placer les différents éléments de notre liste dans ces crochets en les séparant par des virgules. 
+#  On peut par exemple créer une liste de 5 éléments et la placer dans une variable liste comme ceci :
+
+    # liste1 = [1,2,4,8,16,32]
+    # print(liste1)
+
+# liste composée de 5 valeurs
+    # liste2 = ["jean","valerie","paul","lilou","melisse"]
+    # print(liste2)
+
+    # print(liste3)
+    # liste3 = ["melisse", 24, True]
+
+# Récupération des valeurs
+# Les listes possèdent des indices numériques qui commencent à 0.
+# 0,1,2 et etc...
+
+    # liste2 = ["jean","valerie","paul","lilou","melisse"]
+    # print(list2[0])
+    # jean
+    # print(list2[2])
+    # paulprint(list2[-1])
+    # melisse
+
+# Récupe valeur
+    # print(list2[0.2])
+    # jean, paulprint(list2[:])
+    # jean, valerie, paul, lilou, melisse
+
+
+# trois paramètres pour indiquer l’intervalle avec le début, 
+# la fin (exclue) et le pas d’incrément entre chaque valeur
+
+    # for i in range(1, 20, 2):
+    #     print(i)
+        # Affiche
+        #   1
+        #   3
+        #   5
+        #   7
+        #   9
+        #   11
+        #   13
+        #   15
+        #   17
+        #   19
+
+# Il est possible de donner un pas négatif pour obtenir
+# une suite décroissante 
+    # for i in range(5, 0, -1):
+    #     print(i)
+        # # Affiche
+        # #   5
+        # #   4
+        # #   3
+        # #   2
+        # #   1
+
+
+# Interrompre un bloc d’itération
+# Il est possible d’utiliser les mots-clés break et continue
+# pour interrompre l’exécution d’un bloc d’itération.
+
+# break
+# interrompt immédiatement le bloc et le flot d’exécution sort de la boucle
+# et reprend après le bloc.
+
+    # while True:
+    #     if input("Voulez-vous arrêter ? (oui/non) ") == "oui":
+    #         break
+    # print("C'est fini.")
+    # continue
+    # interrompt immédiatement le bloc et on passe à l’itération suivante.
+
+    # for l in "Python":
+    #     if l in "aeiouy":
+    #         continue
+    #     print(l)
+
+#import statistics
+# Cette déclaration permet d'accéder aux fonctions statistiques du module statistics. 
+# Voici quelques-unes des fonctions couramment utilisées fournies par ce module :
+
+    # statistics.mean(data) : Calcule la moyenne arithmétique des éléments dans l'ensemble de données data.
+    # statistics.median(data) : Calcule la médiane des éléments dans l'ensemble de données data.
+    # statistics.mode(data) : Calcule le mode des éléments dans l'ensemble de données data.
+    # statistics.stdev(data) : Calcule l'écart type des éléments dans l'ensemble de données data.
+    # statistics.variance(data) : Calcule la variance des éléments dans l'ensemble de données data.
+
+                    # import statistics
+
+# Création d'un dictionnaire result associant chaque statistique calculée à son nom
+                    # result = {
+                    #     "Mean": mean_value,   # Moyenne
+                    #     "Median": median_value, # Médiane
+                    #     "Standard Deviation": stdev_value, # l'écart type
+                    #     "Variance": variance_value # La variance des données
+                    # }
+
+# Renvoie le dictionnaire result contenant les statistiques calculées
+                    # return result # Renvoie le dictionnaire result contenant les statistiques calculées
+
+ # Déclaration d'une liste à analyser
+                    # ensemble_de_donnees = [12, 15, 18, 20, 25, 30, 35, 40]
+
+#  Appelle fonction analyse_statistique + liste ensemble_de_donnees et stocke les résultats dans la variable resultats.
+                    # resultats = analyse_statistique(ensemble_de_donnees) 
+
+# Affiche les résultats de l'analyse statistique à l'aide d'une boucle, en utilisant une f-string pour formater l'affichage des statistiques.
+                    # print("Résultats de l'analyse statistique :")
+                    # for stat, value in resultats.items():
+                    #     print(f"{stat}: {value}")
+
+
+# Pour documenter : 
+# """Additionne, soustrait ..."""
+
+# def addition(a: float, b: float) -> float:
+#     """Additionne"""
+#     return a + b
+
+# $ py
+# Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+# Type "help", "copyright", "credits" or "license" for more information.
+# >>> import calculatrice as calc
+# >>> som = calc.addition(3,3)
+# >>> som
+# 6
+# >>> dir(calc)
+# ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__',
+#  'addition', 'calculatrice', 'division', 'multiplication', 'soustraction']
+# >>> help(calc.addition)
+# Help on function addition in module calculatrice:
+
+# addition(a: float, b: float) -> float
+#     Additionne
+
+# >>>
+
+
+
+
+
+
+
+
+
+
